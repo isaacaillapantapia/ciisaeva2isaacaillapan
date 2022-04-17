@@ -1,0 +1,84 @@
+<div class="contenedor-navegacion">
+
+    </section>
+    {{> navbar}}
+        <section class="contenedor categoria">
+            <h2 class="text-center">Tus Favoritos</h2>
+            <div class="listado-categoria">
+                <div class="categoria">
+                    <img src="img/imagen1.jpg" alt="Imagen Categoria" />
+                    <a href="#">REGGAETON HIST</a>
+                </div>
+                <div class="categoria">
+                    <img src="img/imagen2.jpg" alt="Imagen Categoria" />
+                    <a href="#">HOUSE CHILLOUT</a>
+                </div>
+                <div class="categoria">
+                    <img src="img/imagen4.webp" alt="Imagen Categoria" />
+                    <a href="#">CYNDI LAUPER</a>
+                </div>
+            </div>
+        </section>
+
+    <div class="container mt-3">
+        
+        <h3>Canciones Agregadas Recientemente</h3>
+        
+        {{#each players}}
+        <div class="alert alert-primary">
+            <div class="card-body">
+                 <img src="{{image}}"  width="250px" height="250px">
+                <h5 class="card-title">{{this.title}}</h5>
+                <p class="card-text">{{this.content}}</p>               
+                <a href="/players/{{this.id}}" class="btn btn-danger btn-ml">Eliminar o editar   lista de  Canciones</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    
+<div class="site-foorer">
+<footer >
+
+        <div class="grid-footer contenedor">
+            <div>
+                <h3>COMPAÑÍA</h3>
+                    <nav class="footer-menu">
+                        <a href="#">Cocina</a>
+                        <a href="#">Acerca de</a>
+                        <a href="#">Empleo</a>
+                        <a href="#">For the Record</a>
+                    </nav>
+            </div>
+            <div>
+                <h3>COMUNIDADES</h3>
+                <nav class="footer-menu">
+                    <a href="#">Servicios para artistas</a>
+                    <a href="#">Desarrolladores</a>
+                    <a href="#">Publicidad</a>
+                    <a href="#">Inversionistas</a>
+                    <a href="#">Proveedores</a>
+                </nav>
+            </div>
+            <div>
+                <h3>ENLACES ÚTILES</h3>
+                <nav class="footer-menu">
+                    <a href="#">Ayuda</a>
+                    <a href="#">Reproductor web</a>
+                    <a href="#">App móvil gratis</a>
+                </nav>
+            </div>
+        </div>
+
+
+
+        <p class="copy-right">Todos lo derechos son reservados</p>
+        
+
+
+
+    </footer>
+
+</div>
+
+
+    

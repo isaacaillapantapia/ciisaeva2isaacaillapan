@@ -1,0 +1,60 @@
+{{> navbar}}
+<div class="container mt-3">
+  <img src="{{image}}"  width="250px" height="250px">
+  <h1>{{title}}</h1>
+  <p>{{content}}</p>
+  <div class="mt-3 d-flex gap-2">
+    <a href="/players/{{id}}/update">
+      <button class="btn btn-primary btn-sm">Cambiar</button>
+    
+    </a>
+    <form action="/players/{{id}}/delete" method="POST">
+      <button type="submit" class="btn btn-danger btn-sm">Eliminar de la playlist</button>
+    </form>
+  </div>
+  {{> backhome}}
+</div>
+
+
+
+
+<footer class="site-foorer">
+
+        <div class="grid-footer contenedor">
+            <div>
+                <h3>COMPAÑÍA</h3>
+                    <nav class="footer-menu">
+                        <a href="#">Cocina</a>
+                        <a href="#">Acerca de</a>
+                        <a href="#">Empleo</a>
+                        <a href="#">For the Record</a>
+                    </nav>
+            </div>
+            <div>
+                <h3>COMUNIDADES</h3>
+                <nav class="footer-menu">
+                    <a href="#">Servicios para artistas</a>
+                    <a href="#">Desarrolladores</a>
+                    <a href="#">Publicidad</a>
+                    <a href="#">Inversionistas</a>
+                    <a href="#">Proveedores</a>
+                </nav>
+            </div>
+            <div>
+                <h3>ENLACES ÚTILES</h3>
+                <nav class="footer-menu">
+                    <a href="#">Ayuda</a>
+                    <a href="#">Reproductor web</a>
+                    <a href="#">App móvil gratis</a>
+                </nav>
+            </div>
+        </div>
+
+   
+
+        <p class="copy-right">Todos lo derechos son reservados</p>
+        
+
+
+
+    </footer>

@@ -1,0 +1,141 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /*1rem=10px*/
+}
+body, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 2;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Globales */
+h2, h3{
+  font-family: 'Playfair Display', serif;
+  margin: 0 0 3rem 0;
+}
+
+h2{
+  font-size: 4rem;
+}
+h3{
+  font-size: 3rem;
+  margin-top: 4rem;
+  
+}
+h5{
+  font-size: 3rem;
+  margin-top: 4rem;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+/*Nav*/
+img{
+  max-width: 100%;
+  display: block;
+}
+.contenedor {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+.box {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.contenedor > div {
+  padding: 1rem;
+}
+.nav-principal{
+  display: flex;
+  justify-content: space-between;
+  background-color: #000;
+
+}
+.nav-principal .box{
+  flex: 0 0 calc(33.3% - 1rem );
+  
+}
+.box a{
+  color: #FFF;
+}
+
+.nav-principal a:hover{
+  color: #1ed760;
+  
+}
+
+
+
+/* Categorias*/
+
+.listado-categoria{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  background: #1ed760;
+  border: 5px solid #1ed600;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+
+}
+.categoria{
+  padding-top: 5rem;
+}
+.categoria a{
+  text-align: center;
+  display: block;
+  padding: 2rem;
+  font-size: 2rem;
+}
+.categoria a:hover{
+  background-color: #037bc0;
+  color: #fff;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+
+
+.site-foorer{
+  border-top: 1px solid #e1e1e1;
+  margin-top: 5rem;
+  padding: 5rem;  
+  margin-bottom: 0; 
+  background: #000;
+  color: #FFF;
+  
+}
+.grid-footer{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.site-foorer h3{
+  margin-bottom: .5rem;
+}
+
+.footer-menu a{
+  display: block;
+  color: #FFF;
+}
+.copy-right{
+  margin-top: 5rem;
+  text-align: center;
+}
+.cont{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+

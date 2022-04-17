@@ -1,0 +1,72 @@
+{{> navbar}}
+
+
+<div class="container mt-3">
+  <h1>
+    {{#if id}}
+      Actualizando el artículo "{{title}}" ({{id}})
+    {{else}}
+      Crear un nuevo artículo
+    {{/if}}
+  </h1>
+  <!--
+    Este formulario se usará tanto para edición como creación, este if nos dice que si viene un id, entonces será un update, si no, será un create.
+    Para el action, si viene un id será un post a /players/:id/update, si no, será un post a /players/create.
+  -->
+  <form action="/players/{{#if id}}{{id}}/update{{else}}create{{/if}}" method="POST">
+    <div class="mb-3">
+      <label for="title" class="form-label">Agrega el Nombre del Artista o Grupo Musical</label>
+      <input type="text" class="form-control" name="title" aria-describedby="titleHelp" required="true" value="{{title}}">      
+    </div>
+    <div class="mb-3">
+      <label for="content" class="form-label">Agrega el titulo de la cancion o escribe algun comentario</label>
+      <textarea class="form-control" name="content" rows="3" aria-describedby="contentHelp">{{content}}</textarea>     
+    </div>
+    <div class="mb-3">
+      <label for="title" class="form-label">Imagen (Agrega imagen del Grupo o Artista Inserta una url de la imagen)</label>
+      <input type="text" class="form-control" name="image" aria-describedby="imageHelp" required="true" value="{{image}}" placeholder="Agrega URL//www.ejempl.cl">
+      
+    </div>
+    <div class="mb-3">
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+  </form>
+</div>
+
+<footer class="site-foorer">
+
+        <div class="grid-footer contenedor">
+            <div>
+                <h3>COMPAÑÍA</h3>
+                    <nav class="footer-menu">
+                        <a href="#">Cocina</a>
+                        <a href="#">Acerca de</a>
+                        <a href="#">Empleo</a>
+                        <a href="#">For the Record</a>
+                    </nav>
+            </div>
+            <div>
+                <h3>COMUNIDADES</h3>
+                <nav class="footer-menu">
+                    <a href="#">Servicios para artistas</a>
+                    <a href="#">Desarrolladores</a>
+                    <a href="#">Publicidad</a>
+                    <a href="#">Inversionistas</a>
+                    <a href="#">Proveedores</a>
+                </nav>
+            </div>
+            <div>
+                <h3>ENLACES ÚTILES</h3>
+                <nav class="footer-menu">
+                    <a href="#">Ayuda</a>
+                    <a href="#">Reproductor web</a>
+                    <a href="#">App móvil gratis</a>
+                </nav>
+            </div>
+        </div>
+
+        <p class="copy-right">Todos lo derechos son reservados</p>
+        
+    </footer>
+
+  
